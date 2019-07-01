@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+
+      <div class="heading">
+        <h1>{{mainTitle}}</h1>
+        <p>{{descript}}</p>
+      </div>
+
+    <ul>
+      <li v-for="todo, i in todos"><b><span>{{i + 1}}</span> : {{ todo.text }}</b> <button class="btn" @click="delLi(i)">-</button> </li>
+    </ul>
+
+    <div class="li-control">
+      <input type="text" placeholder="Добавить поле!" v-model="inputValue">
+      <button class="btn" @click="pushLi">+</button>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
+
+</html>
